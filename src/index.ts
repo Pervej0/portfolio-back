@@ -1,6 +1,6 @@
 import { Server } from "http";
 import app from "./app";
-import config from "./config/config";
+import config from "./app/config/config";
 
 let server: Server;
 const main = async () => {
