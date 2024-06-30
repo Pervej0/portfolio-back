@@ -1,5 +1,12 @@
+import { Server } from "http";
 import app from "./app";
 import config from "./config/config";
-const PORT = 8080;
 
-app.listen(PORT, () => console.log("Server is running on port: ", PORT));
+let server: Server;
+const main = async () => {
+  server = app.listen(config.PORT, () =>
+    console.log("The Server is running on port", config.PORT)
+  );
+};
+
+main();
