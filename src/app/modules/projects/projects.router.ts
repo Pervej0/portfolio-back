@@ -5,4 +5,5 @@ app.get("/", (req, res) => {
   res.send("Hello Projects");
 });
 
-export const projectRoute = app;
+const ProjectRoutes = app;
+export default ProjectRoutes;
