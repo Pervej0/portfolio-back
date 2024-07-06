@@ -6,9 +6,13 @@ import { LoginDB } from "./auth.service";
 
 export const login: RequestHandler = asyncCatch(async (req, res) => {
   const result = await LoginDB(req.body);
+
+  res.cookie("accessToken", { accessToken: result });
   return sendResponse(res, {
-    statusCode: StatusCodes.ACCEPTED,
+    statusCode: StatusCodes.OK,
     message: "Successfully logged in!",
-    data: result,
+    data: {
+      accessToken: result,
+    },
   });
 });

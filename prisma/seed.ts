@@ -1,7 +1,7 @@
 import { UserRole } from "@prisma/client";
 import prisma from "../src/app/shared/prisma";
 
-const authorEmail = "admin0@gmail.com";
+const authorEmail = "admin@gmail.com";
 
 const createMe = async () => {
   try {

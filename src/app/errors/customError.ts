@@ -10,3 +10,5 @@ class customError extends Error {
     }
   }
 }
+
+export default customError;
