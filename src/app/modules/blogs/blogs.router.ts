@@ -1,8 +1,8 @@
 import express from "express";
-import { createProject } from "./projects.controller";
+import { createBlog } from "./blogs.controller";
 const app = express.Router();
 
-app.post("/", createProject);
+app.post("/", createBlog);
 
 const ProjectRoutes = app;
 export default ProjectRoutes;

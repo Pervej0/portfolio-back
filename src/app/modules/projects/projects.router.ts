@@ -1,9 +1,8 @@
 import express from "express";
+import { createProject } from "./projects.controller";
 const app = express.Router();
 
-app.get("/", (req, res) => {
-  res.send("Hello Projects");
-});
+app.post("/", createProject);
 
 const ProjectRoutes = app;
 export default ProjectRoutes;
