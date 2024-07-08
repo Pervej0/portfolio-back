@@ -4,5 +4,5 @@ const app = express.Router();
 
 app.post("/", createBlog);
 
-const ProjectRoutes = app;
-export default ProjectRoutes;
+const BlogRoutes = app;
+export default BlogRoutes;

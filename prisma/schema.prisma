@@ -46,6 +46,26 @@ model Project {
   @@map("projects")
 }
 
+enum skillLevel {
+  Advance
+  Intermediate
+  Comfortable
+  Beginner
+  Novice
+}
+
+model Skill {
+  id        Int        @id @default(autoincrement())
+  name      String
+  rate      Float
+  icon      String
+  level     skillLevel
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@map("skills")
+}
+
 model Blog {
   id         Int      @id @default(autoincrement())
   title      String
