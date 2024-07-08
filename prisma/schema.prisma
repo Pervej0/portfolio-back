@@ -42,14 +42,36 @@ model Project {
   technology   String[]
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+
+  @@map("projects")
 }
 
 model Blog {
-  id        Int      @id @default(autoincrement())
-  title     String
-  desc      String
-  mainImage String
-  images    String[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         Int      @id @default(autoincrement())
+  title      String
+  desc       String
+  intro      String
+  desc1      String
+  desc2      String
+  desc3      String
+  conclusion String
+  mainImage  String
+  images     String[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("blogs")
+}
+
+model experience {
+  id          Int      @id @default(autoincrement())
+  companyName String
+  location    String
+  startDate   String
+  endDate     String
+  duration    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("experience")
 }
