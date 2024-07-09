@@ -1,10 +1,11 @@
 export type TBlog = {
-  title: String;
-  intro: String;
-  desc1: String;
-  desc2: String;
-  desc3: String;
-  conclusion: String;
-  mainImage: String;
-  images: String[];
+  title: string;
+  intro: string;
+  desc1: string;
+  desc2: string;
+  desc3: string;
+  conclusion: string;
+  mainImage: string;
+  images: string[];
+  isDeleted: boolean;
 };

@@ -1,10 +1,11 @@
 export type TProjects = {
-  projectTitle: String;
-  desc: String;
-  image: String;
-  overview: String;
-  live: String;
-  frontend: String;
-  backend: String;
-  technologies: String[];
+  projectTitle: string;
+  desc: string;
+  image: string;
+  overview: string;
+  live: string;
+  frontend: string;
+  backend: string;
+  technologies: string[];
+  isDeleted: boolean;
 };

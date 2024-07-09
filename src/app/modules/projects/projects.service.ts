@@ -1,4 +1,5 @@
 import prisma from "../../shared/prisma";
+import { TProjects } from "../../types";
 
 export const createProjectDB = async (payload: any) => {
   const result = await prisma.project.create({
@@ -20,7 +21,18 @@ export const getSingleProjectDB = async (id: number) => {
   return projects;
 };
 
-export const deleteProject = async (id: number) => {
+export const updateSingleProjectDB = async (
+  id: number,
+  payload: Partial<TProjects>
+) => {
+  const projects = await prisma.project.update({
+    where: { id: id },
+    data: payload,
+  });
+  return projects;
+};
+
+export const deleteProjectDB = async (id: number) => {
   const result = await prisma.project.update({
     where: { id: id },
     data: {
