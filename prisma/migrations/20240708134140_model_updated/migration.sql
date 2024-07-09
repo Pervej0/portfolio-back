@@ -21,7 +21,7 @@ CREATE TABLE "projects" (
     "live" TEXT NOT NULL,
     "frontend" TEXT NOT NULL,
     "backend" TEXT NOT NULL,
-    "technology" TEXT[],
+    "technologies" TEXT[],
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
