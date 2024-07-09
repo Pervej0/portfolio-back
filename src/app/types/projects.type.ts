@@ -6,5 +6,5 @@ export type TProjects = {
   live: String;
   frontend: String;
   backend: String;
-  technology: String[];
+  technologies: String[];
 };

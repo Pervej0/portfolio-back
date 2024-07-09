@@ -1,10 +1,10 @@
 import express from "express";
 import { createProject } from "./projects.controller";
-import { projectValidation } from "./projects.validation";
+import { projectValidationSchema } from "./projects.validation";
 import dataValidation from "../../middleware/dataValidation";
-const app = express.Router();
+const router = express.Router();
 
-app.post("/create", dataValidation(projectValidation), createProject);
+router.post("/create", dataValidation(projectValidationSchema), createProject);
 
-const ProjectRoutes = app;
+const ProjectRoutes = router;
 export default ProjectRoutes;
