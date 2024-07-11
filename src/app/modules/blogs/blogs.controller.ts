@@ -15,7 +15,7 @@ export const createBlog: RequestHandler = asyncCatch(async (req, res) => {
 
   return sendResponse(res, {
     statusCode: StatusCodes.OK,
-    message: "Successfully logged in!",
+    message: "Blog Created Successfully!",
     data: result,
   });
 });
