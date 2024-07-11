@@ -1,8 +1,26 @@
 import express from "express";
-import { createExperience } from "./experience.controller";
-const app = express.Router();
+import {
+  createExperience,
+  deleteExperience,
+  getAllExperience,
+  getSingleExperience,
+  updateSingleExperience,
+} from "./experience.controller";
+import auth from "../../middleware/auth";
+import dataValidation from "../../middleware/dataValidation";
+import { experienceValidationSchema } from "./experience.validation";
+const router = express.Router();
 
-app.post("/", createExperience);
+router.get("/", getAllExperience);
+router.post(
+  "/create",
+  auth(),
+  dataValidation(experienceValidationSchema),
+  createExperience
+);
+router.get("/:experienceId", getSingleExperience);
+router.put("/update", updateSingleExperience);
+router.delete("/:experienceId", deleteExperience);
 
-const ExperienceRoutes = app;
+const ExperienceRoutes = router;
 export default ExperienceRoutes;
